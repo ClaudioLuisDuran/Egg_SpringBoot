@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Project Hoteles">
+  <ClassDiagramComponents>
+    <Class name="Hotel" package="" visibility="public" xPosition="149.0" yPosition="142.0">
+      <Fields>
+        <Field name="habitaciones" type="Int" visibility="private"/>
+        <Field name="camas" type="Int" visibility="private"/>
+        <Field name="pisos" type="Int" visibility="private"/>
+        <Field name="precioHab" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Hotel4" package="" visibility="public" xPosition="85.0" yPosition="364.0">
+      <Fields>
+        <Field name="gimnasio" type="Gimnasio" visibility="private"/>
+        <Field name="nombreResto" type="String" visibility="private"/>
+        <Field name="capaciddResto" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Hotel5" package="" visibility="public" xPosition="279.0" yPosition="504.0">
+      <Fields>
+        <Field name="salonesConf" type="Int" visibility="private"/>
+        <Field name="suites" type="Int" visibility="private"/>
+        <Field name="limosinas" type="Int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Gimnasio" package="" visibility="public" xPosition="64.0" yPosition="604.0">
+      <Fields>
+        <Field name="tipo" type="char" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AlojamientoEH" package="" visibility="public" xPosition="476.0" yPosition="142.0">
+      <Fields>
+        <Field name="privado" type="boolean" visibility="private"/>
+        <Field name="superficie" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Camping" package="" visibility="public" xPosition="368.0" yPosition="311.0">
+      <Fields>
+        <Field name="carpasMax" type="Int" visibility="private"/>
+        <Field name="sanitarios" type="Int" visibility="private"/>
+        <Field name="Restaurant" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Residencias" package="" visibility="public" xPosition="595.0" yPosition="353.0">
+      <Fields>
+        <Field name="habitaciones" type="Int" visibility="private"/>
+        <Field name="descuentos" type="boolean" visibility="private"/>
+        <Field name="campoDeportes" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Residencias" target="AlojamientoEH"/>
+    <IsRelation name="is" source="Hotel5" target="Hotel4"/>
+    <IsRelation name="is" source="Hotel4" target="Hotel"/>
+    <IsRelation name="is" source="Camping" target="AlojamientoEH"/>
+    <HasRelation name="tiene" source="Gimnasio" target="Hotel4" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

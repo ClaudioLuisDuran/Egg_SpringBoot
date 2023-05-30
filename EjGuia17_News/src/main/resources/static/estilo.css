@@ -1,0 +1,17 @@
+
+
+.text-truncate-custom{
+    text-overflow: ellipsis;
+}
+
+.comentario{
+    min-height: 50px;
+}
+
+.max-lines{
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+

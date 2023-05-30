@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Cuota">
+  <ClassDiagramComponents>
+    <Class name="Cuota" package="Entidades" visibility="public" xPosition="66.0" yPosition="143.0">
+      <Fields>
+        <Field name="numeroCuota" type="int" visibility="private"/>
+        <Field name="montoCuota" type="int" visibility="private"/>
+        <Field name="pagada" type="boolean" visibility="private"/>
+        <Field name="vencimiento" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

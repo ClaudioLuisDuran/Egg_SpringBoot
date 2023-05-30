@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidades">
+  <ClassDiagramComponents>
+    <Class name="Celador" package="Entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="sector" type="Sectores" visibility="private"/>
+        <Field name="datoEmpleado" type="Empleados" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Sectores" name="sector"/>
+          <Argument type="Empleados" name="datoEmpleado"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSector" returnType="Sectores" visibility="public"/>
+        <Method name="setSector" returnType="void" visibility="public">
+          <Argument type="Sectores" name="sector"/>
+        </Method>
+        <Method name="getDatoEmpleado" returnType="Empleados" visibility="public"/>
+        <Method name="setDatoEmpleado" returnType="void" visibility="public">
+          <Argument type="Empleados" name="datoEmpleado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Empleados" package="Entidades" visibility="public" xPosition="121.0" yPosition="674.0">
+      <Fields>
+        <Field name="anioIngreso" type="int" visibility="private"/>
+        <Field name="nroDespacho" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="anioIngreso"/>
+          <Argument type="int" name="nroDespacho"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAnioIngreso" returnType="int" visibility="public"/>
+        <Method name="setAnioIngreso" returnType="void" visibility="public">
+          <Argument type="int" name="anioIngreso"/>
+        </Method>
+        <Method name="getNroDespacho" returnType="int" visibility="public"/>
+        <Method name="setNroDespacho" returnType="void" visibility="public">
+          <Argument type="int" name="nroDespacho"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estudiante" package="Entidades" visibility="public" xPosition="428.0" yPosition="479.0">
+      <Fields>
+        <Field name="curso" type="Cursos" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Cursos" name="curso"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCurso" returnType="Cursos" visibility="public"/>
+        <Method name="setCurso" returnType="void" visibility="public">
+          <Argument type="Cursos" name="curso"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="Entidades" visibility="public" isAbstract="true" xPosition="857.0" yPosition="73.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="DNI" type="String" visibility="private"/>
+        <Field name="estadoCivil" type="EstadoCivil" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDNI" returnType="String" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="String" name="DNI"/>
+        </Method>
+        <Method name="getEstadoCivil" returnType="EstadoCivil" visibility="public"/>
+        <Method name="setEstadoCivil" returnType="void" visibility="public">
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="Entidades" visibility="public" xPosition="989.0" yPosition="702.0">
+      <Fields>
+        <Field name="area" type="Areas" visibility="private"/>
+        <Field name="datoEmpleado" type="Empleados" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.Estudiante" target="Entidades.Persona"/>
+    <HasRelation name="datoEmpleado" source="Entidades.Profesor" target="Entidades.Empleados" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Profesor" target="Entidades.Persona"/>
+    <IsRelation name="is" source="Entidades.Celador" target="Entidades.Persona"/>
+    <HasRelation name="datoEmpleado" source="Entidades.Celador" target="Entidades.Empleados" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Celador" target="Entidades.Empleados" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

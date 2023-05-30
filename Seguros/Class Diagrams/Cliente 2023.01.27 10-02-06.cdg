@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Cliente">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="Entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="DNI" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="vehiculos" type="ArrayList&lt;Vehiculo&gt;" visibility="private"/>
+        <Field name="polizas" type="ArrayList&lt;Poliza&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="DNI"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="domicilio"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Vehiculo&gt;" name="vehiculos"/>
+          <Argument type="ArrayList&lt;Poliza&gt;" name="polizas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVehiculos" returnType="ArrayList&lt;Vehiculo&gt;" visibility="public"/>
+        <Method name="setVehiculos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Vehiculo&gt;" name="vehiculos"/>
+        </Method>
+        <Method name="getPolizas" returnType="ArrayList&lt;Poliza&gt;" visibility="public"/>
+        <Method name="setPolizas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Poliza&gt;" name="polizas"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDNI" returnType="String" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="String" name="DNI"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getDomicilio" returnType="String" visibility="public"/>
+        <Method name="setDomicilio" returnType="void" visibility="public">
+          <Argument type="String" name="domicilio"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

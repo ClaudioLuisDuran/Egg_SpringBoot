@@ -1,0 +1,17 @@
+   <!--     <div align="center" class="mx-auto" sec:authorize="hasRole('ADMIN', 'PRESS')" > -->
+           <div align="center" class="mx-auto" th:if="${session.usuariosession.rol.toString == 'ADMIN' || session.usuariosession.rol.toString == 'PRESS'}" > 
+            <div>   <a  type="button" class="btn btn-primary btn-lgy" href="/admin/dashboard">Panel</a>
+                <a  type="button" class="btn btn-primary btn-lgy" href="/noticia/registrar">Nueva noticia</a>
+                <a  type="button" class="btn btn-primary btn-lgy" href="/noticia/listamodif">Modificar noticia</a>
+                <a  type="button" class="btn btn-primary btn-lgy" href="/noticia/listadel">Borrar noticia</a>
+                <a  type="button" class="btn btn-primary btn-lgy" th:if="${session.usuariosession.rol.toString == 'ADMIN'}" href="/admin/usuarios">Usuarios</a>
+            </div>
+               <br>
+          <div align="center" class="mx-auto" th:if="${session.usuariosession.rol.toString == 'ADMIN'}" > 
+            <div>   <a  type="button" class="btn btn-primary btn-lgy" href="#">Periodistas >> </a>
+                <a  type="button" class="btn btn-primary btn-lgy" href="/admin/registrarPress">New Press</a>
+                <a  type="button" class="btn btn-primary btn-lgy" href="/admin/listarPress">Listar Press</a>
+                <a  type="button" class="btn btn-primary btn-lgy" href="/admin/modificarPress">Modificar Press</a>
+            </div>
+      
+        </div>

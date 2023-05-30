@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Proyecto Guia 9 Ej 1">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="" visibility="public" xPosition="147.0" yPosition="173.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="raza"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="tamanio"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="663.0" yPosition="173.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="DNI" type="int" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="int" name="DNI"/>
+          <Argument type="Perro" name="perro"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ServicioPerro" package="" visibility="public" xPosition="338.0" yPosition="486.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPerro" returnType="Perro" visibility="public"/>
+        <Method name="mostrarPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="p"/>
+        </Method>
+        <Method name="adoptarPerro" returnType="Persona" visibility="public">
+          <Argument type="Persona" name="p"/>
+          <Argument type="Perro" name="m"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioPersona" package="" visibility="public" xPosition="704.0" yPosition="531.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPersona" returnType="Persona" visibility="public"/>
+        <Method name="mostrarPersona" returnType="void" visibility="public">
+          <Argument type="Persona" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="adoptar" source="Persona" target="ServicioPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mascotas" source="Persona" target="Perro" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <UseRelation name="Servicio" source="Perro" target="ServicioPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="ServicioPers" source="Persona" target="ServicioPersona" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

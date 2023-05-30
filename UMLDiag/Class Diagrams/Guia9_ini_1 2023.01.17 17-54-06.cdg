@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Guia9_ini_1">
+  <ClassDiagramComponents>
+    <Class name="DNI" package="Entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="serie" type="String" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="serie"/>
+          <Argument type="int" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSerie" returnType="String" visibility="public"/>
+        <Method name="setSerie" returnType="void" visibility="public">
+          <Argument type="String" name="serie"/>
+        </Method>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="Entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="dni" type="DNI" visibility="private"/>
+        <Field name="sexo" type="Sexo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="DNI" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSexo" returnType="Sexo" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="Sexo" name="sexo"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDni" returnType="DNI" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="DNI" name="dni"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainPersonas" package="Principal" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Sexo" package="Enumeraciones" visibility="public" xPosition="679.0" yPosition="20.0">
+      <Literals>
+        <Literal name="VARON"/>
+        <Literal name="MUJER"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidades.Persona" target="Enumeraciones.Sexo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sexo" source="Entidades.Persona" target="Enumeraciones.Sexo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dni" source="Entidades.Persona" target="Entidades.DNI" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Persona" target="Entidades.DNI" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

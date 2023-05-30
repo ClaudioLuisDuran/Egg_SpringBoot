@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Enumeraciones">
+  <ClassDiagramComponents>
+    <Enum name="Sexo" package="Enumeraciones" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Literals>
+        <Literal name="VARON"/>
+        <Literal name="MUJER"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
